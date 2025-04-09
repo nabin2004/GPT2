@@ -21,7 +21,7 @@ model.resize_token_embeddings(len(tokenizer))
 training_args = TrainingArguments(
     output_dir="/kaggle/working/results",
     overwrite_output_dir=True,
-    num_train_epochs=2,                         # Fewer epochs for speed, increase later if needed
+    num_train_epochs=100,                         # Fewer epochs for speed, increase later if needed
     per_device_train_batch_size=16,             # Higher batch size if GPU allows
     gradient_accumulation_steps=1,              # 1 if you can fit full batch into memory
     warmup_steps=100,
